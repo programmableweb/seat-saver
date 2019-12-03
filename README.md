@@ -58,7 +58,7 @@ go to the Ubuntu Playground.)
 
 **Step 1:** Clone the source into your host machine.
 
-`git clone https://github.com/reselbob/seat-saver`
+`git clone https://github.com/programmableweb/seat-saver`
 
 **Step 2:** Go to the project directory
 
@@ -80,7 +80,7 @@ You can use a `minikube` instance of the Katacoda interactive learning environme
 
 **Step 1:** Clone the source into your host machine.
 
-`git clone https://github.com/reselbob/seat-saver`
+`git clone https://github.com/programmableweb/seat-saver`
 
 **Step 2:** Go to the project directory
 
@@ -186,7 +186,7 @@ You're now ready to exercise the Kubernetes installation of Seat Saver.
 
 **Step 1:** Clone the Seat Saver source code from the GitHub repository.
 
-`git clone https://github.com/reselbob/seat-saver`
+`git clone https://github.com/programmableweb/seat-saver`
 
 **Step 2:** Set the required environment variables as described in the section above, ***Seat Saver Environment Variables***.
 
