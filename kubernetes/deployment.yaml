@@ -1,0 +1,47 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: seatsaver
+spec:
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 10%
+  template:
+    metadata:
+      labels:
+        app: seatsaver
+    spec:
+      containers:
+        - name: seatsaver
+          image: localhost:5000/seatsaver:beta
+          ports:
+            - containerPort: 4000
+          env:
+            - name: MONGODB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: seatsaver-data
+                  key: mongodb_url
+            - name: MESSAGE_BROKER_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: seatsaver-data
+                  key: message_broker_host
+            - name: MESSAGE_BROKER_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: seatsaver-data
+                  key: message_broker_port
+            - name: MESSAGE_BROKER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: seatsaver-data
+                  key: message_broker_password
+      initContainers:
+        - name: init-myservice
+          image: busybox:1.31
+          command: ['sh', '-c', 'until nslookup seatsaver; do echo waiting for seatsaver; sleep 2; done;']
