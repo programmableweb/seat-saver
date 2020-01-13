@@ -184,6 +184,8 @@ You're now ready to exercise the Kubernetes installation of Seat Saver.
 
 ## Running Seat Saver as a Standalone Application
 
+(If you like, you can run this code standalone from within the Katacoda Ubuntu Playground found [here](https://katacoda.com/courses/ubuntu/playground)
+
 **Step 1:** Clone the Seat Saver source code from the GitHub repository.
 
 `git clone https://github.com/programmableweb/seat-saver`
@@ -194,7 +196,7 @@ You're now ready to exercise the Kubernetes installation of Seat Saver.
 export MONGODB_URL=<some_value>
 export MESSAGE_BROKER_HOST=<some_value>
 export MESSAGE_BROKER_PORT=<some_value_optional>
-export MESSAGE_BROKER_PASSWORKD=<some_value_optional>
+export MESSAGE_BROKER_PASSWORD=<some_value_optional>
 ```
 **Step 3:** Navigate to the directory that has the Seat Saver source  code.
 
