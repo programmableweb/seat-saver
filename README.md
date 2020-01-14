@@ -184,7 +184,7 @@ You're now ready to exercise the Kubernetes installation of Seat Saver.
 
 ## Running Seat Saver as a Standalone Application
 
-(If you like, you can run this code standalone from within the Katacoda Ubuntu Playground found [here](https://katacoda.com/courses/ubuntu/playground).)
+(If you like, you can run this code standalone from within the Katacoda Ubuntu Playground found [https://katacoda.com/courses/ubuntu/playground](https://katacoda.com/courses/ubuntu/playground).)
 
 **Step 1:** Clone the Seat Saver source code from the GitHub repository.
 
